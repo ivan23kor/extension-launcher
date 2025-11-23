@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Extension Launcher",
+  "version": "1.0",
+  "description": "A simple popup to list and launch installed extensions.",
+  "permissions": [
+    "management"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Extension Launcher",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

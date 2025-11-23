@@ -1,0 +1,121 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --hover-bg: #f0f0f0;
+  --border-color: #e0e0e0;
+  --accent-color: #4285f4;
+  --secondary-text: #666666;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #202124;
+    --text-color: #e8eaed;
+    --hover-bg: #3c4043;
+    --border-color: #5f6368;
+    --secondary-text: #9aa0a6;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+}
+
+.header {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
+  z-index: 10;
+}
+
+.header h1 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#search {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  outline: none;
+}
+
+#search:focus {
+  border-color: var(--accent-color);
+}
+
+#extension-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.extension-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid transparent;
+}
+
+.extension-item:hover {
+  background-color: var(--hover-bg);
+}
+
+.extension-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  object-fit: contain;
+}
+
+.extension-info {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.extension-name {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.extension-type {
+  font-size: 11px;
+  color: var(--secondary-text);
+  margin-top: 2px;
+}
+
+.hidden {
+  display: none;
+}
+
+#empty-state {
+  padding: 20px;
+  text-align: center;
+  color: var(--secondary-text);
+  font-size: 14px;
+}
